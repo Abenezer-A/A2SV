@@ -1,5 +1,6 @@
 class Solution:
     def largestNumber(self, nums: List[int]) -> str:
+        if all(num == 0 for num in nums): return (str(0))
         nums = [str(num) for num in nums]
         nums.sort(key=lambda x: x*10, reverse=True)
-        return ''.join(nums) 
+        return ''.join(nums)    
